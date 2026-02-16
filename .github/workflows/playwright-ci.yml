@@ -28,6 +28,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install allure-pytest
+          npx playwright install-deps
           npx playwright install
 
       # 4️⃣ Run Playwright tests
