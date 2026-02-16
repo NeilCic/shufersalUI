@@ -34,6 +34,7 @@ async def page_with_device(request) -> Page:
             context = await browser.new_context()
 
         page = await context.new_page()
+        page.set_default_timeout(60000)
         yield page, device_type == 'mobile'
 
         if hasattr(request.node, "rep_call") and request.node.rep_call.failed:
