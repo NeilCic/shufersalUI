@@ -10,6 +10,7 @@ class Header:
 
     @allure.step("Search for product {val}")
     async def search(self, val: str):
+        await self.page.wait_for_selector("#js-site-search-input", state="visible")  # todo experiment
         await self.search_input.fill(val)
         await self.search_input.press("Enter")
 
