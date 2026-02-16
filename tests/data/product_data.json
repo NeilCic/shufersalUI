@@ -1,0 +1,32 @@
+{
+  "valid_product_info": [
+    {
+      "name": "שמן זית כתית מעולה",
+      "volume": "750",
+      "manufacturer": "Fernando"
+    },
+    {
+      "name": "שמן זית כתית מעולה",
+      "volume": "750",
+      "manufacturer": "MATTEO"
+    }
+  ],
+  "invalid_product_info": [
+    {
+      "name": "qwerty"
+    },
+    {
+      "name": "aodsugsdiifgu"
+    }
+  ],
+
+  "should_be_valid": [
+    {
+      "name": "תרסיס שמן זית כתית מעולה",
+      "volume": "150",
+      "manufacturer": "עץ הזית",
+      "_note": "running this will fail the test. its an actual bug - name appears differently",
+      "_note2": "not being used currently"
+    }
+  ]
+}
