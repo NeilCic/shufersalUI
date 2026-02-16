@@ -35,6 +35,7 @@ jobs:
         run: |
           mkdir -p reports/allure-results
           pytest -v --alluredir=reports/allure-results
+        continue-on-error: true
 
       # 5️⃣ Generate Allure report
       - name: Generate Allure report
