@@ -31,11 +31,16 @@ jobs:
           npx playwright install-deps
           npx playwright install
 
+      # 3️⃣a Install Allure CLI
+      - name: Install Allure CLI
+        run: |
+          npm install -g allure-commandline
+
       # 4️⃣ Run Playwright tests
       - name: Run tests
         run: |
           mkdir -p reports/allure-results
-          pytest -v -n 1 --alluredir=reports/allure-results
+          pytest -v --alluredir=reports/allure-results
         continue-on-error: true
 
       # 5️⃣ Generate Allure report
@@ -49,3 +54,4 @@ jobs:
         with:
           name: allure-report
           path: reports/allure-report
+
